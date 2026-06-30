@@ -1,4 +1,4 @@
-module github.com/joanaeliseal/microservices-proto/golang/payment
+module github.com/joanaeliseal/microservices-proto/golang/shipping
 
 go 1.21
 

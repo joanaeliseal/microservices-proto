@@ -1,6 +1,6 @@
 syntax = "proto3";
-option go_package = "github/joanaeliseal/microservices-proto/golang 
-/order";
+
+option go_package = "github.com/joanaeliseal/microservices-proto/golang/order";
 
 message CreateOrderRequest {
 	int32 costumer_id = 1;
@@ -19,6 +19,5 @@ message CreateOrderResponse {
 }
 
 service Order {
-	rpc Create ( CreateOrderRequest )
-		returns ( CreateOrderResponse ) {}
+	rpc Create (CreateOrderRequest) returns (CreateOrderResponse) {}
 }
