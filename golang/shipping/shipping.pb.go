@@ -173,19 +173,18 @@ var File_shipping_shipping_proto protoreflect.FileDescriptor
 
 const file_shipping_shipping_proto_rawDesc = "" +
 	"\n" +
-	"\x17shipping/shipping.proto\"Z\n" +
+	"\x17shipping/shipping.proto\x12\bshipping\"c\n" +
 	"\x10ShipOrderRequest\x12\x19\n" +
-	"\border_id\x18\x01 \x01(\x03R\aorderId\x12+\n" +
-	"\vorder_items\x18\x02 \x03(\v2\n" +
-	".OrderItemR\n" +
+	"\border_id\x18\x01 \x01(\x03R\aorderId\x124\n" +
+	"\vorder_items\x18\x02 \x03(\v2\x13.shipping.OrderItemR\n" +
 	"orderItems\"J\n" +
 	"\tOrderItem\x12!\n" +
 	"\fproduct_code\x18\x01 \x01(\tR\vproductCode\x12\x1a\n" +
 	"\bquantity\x18\x02 \x01(\x05R\bquantity\":\n" +
 	"\x11ShipOrderResponse\x12%\n" +
-	"\x0eestimated_days\x18\x01 \x01(\x05R\restimatedDays29\n" +
-	"\bShipping\x12-\n" +
-	"\x04Ship\x12\x11.ShipOrderRequest\x1a\x12.ShipOrderResponseB=Z;github.com/joanaeliseal/microservices-proto/golang/shippingb\x06proto3"
+	"\x0eestimated_days\x18\x01 \x01(\x05R\restimatedDays2K\n" +
+	"\bShipping\x12?\n" +
+	"\x04Ship\x12\x1a.shipping.ShipOrderRequest\x1a\x1b.shipping.ShipOrderResponseB=Z;github.com/joanaeliseal/microservices-proto/golang/shippingb\x06proto3"
 
 var (
 	file_shipping_shipping_proto_rawDescOnce sync.Once
@@ -201,14 +200,14 @@ func file_shipping_shipping_proto_rawDescGZIP() []byte {
 
 var file_shipping_shipping_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_shipping_shipping_proto_goTypes = []any{
-	(*ShipOrderRequest)(nil),  // 0: ShipOrderRequest
-	(*OrderItem)(nil),         // 1: OrderItem
-	(*ShipOrderResponse)(nil), // 2: ShipOrderResponse
+	(*ShipOrderRequest)(nil),  // 0: shipping.ShipOrderRequest
+	(*OrderItem)(nil),         // 1: shipping.OrderItem
+	(*ShipOrderResponse)(nil), // 2: shipping.ShipOrderResponse
 }
 var file_shipping_shipping_proto_depIdxs = []int32{
-	1, // 0: ShipOrderRequest.order_items:type_name -> OrderItem
-	0, // 1: Shipping.Ship:input_type -> ShipOrderRequest
-	2, // 2: Shipping.Ship:output_type -> ShipOrderResponse
+	1, // 0: shipping.ShipOrderRequest.order_items:type_name -> shipping.OrderItem
+	0, // 1: shipping.Shipping.Ship:input_type -> shipping.ShipOrderRequest
+	2, // 2: shipping.Shipping.Ship:output_type -> shipping.ShipOrderResponse
 	2, // [2:3] is the sub-list for method output_type
 	1, // [1:2] is the sub-list for method input_type
 	1, // [1:1] is the sub-list for extension type_name

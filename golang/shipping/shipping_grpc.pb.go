@@ -19,7 +19,7 @@ import (
 const _ = grpc.SupportPackageIsVersion9
 
 const (
-	Shipping_Ship_FullMethodName = "/Shipping/Ship"
+	Shipping_Ship_FullMethodName = "/shipping.Shipping/Ship"
 )
 
 // ShippingClient is the client API for Shipping service.
@@ -108,7 +108,7 @@ func _Shipping_Ship_Handler(srv interface{}, ctx context.Context, dec func(inter
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var Shipping_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "Shipping",
+	ServiceName: "shipping.Shipping",
 	HandlerType: (*ShippingServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

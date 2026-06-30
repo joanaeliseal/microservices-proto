@@ -189,12 +189,11 @@ var File_order_order_proto protoreflect.FileDescriptor
 
 const file_order_order_proto_rawDesc = "" +
 	"\n" +
-	"\x11order/order.proto\"\x83\x01\n" +
+	"\x11order/order.proto\x12\x05order\"\x89\x01\n" +
 	"\x12CreateOrderRequest\x12\x1f\n" +
 	"\vcostumer_id\x18\x01 \x01(\x05R\n" +
-	"costumerId\x12+\n" +
-	"\vorder_items\x18\x02 \x03(\v2\n" +
-	".OrderItemR\n" +
+	"costumerId\x121\n" +
+	"\vorder_items\x18\x02 \x03(\v2\x10.order.OrderItemR\n" +
 	"orderItems\x12\x1f\n" +
 	"\vtotal_price\x18\x03 \x01(\x02R\n" +
 	"totalPrice\"i\n" +
@@ -204,9 +203,9 @@ const file_order_order_proto_rawDesc = "" +
 	"unit_price\x18\x02 \x01(\x02R\tunitPrice\x12\x1a\n" +
 	"\bquantity\x18\x03 \x01(\x05R\bquantity\"0\n" +
 	"\x13CreateOrderResponse\x12\x19\n" +
-	"\border_id\x18\x01 \x01(\x05R\aorderId2>\n" +
-	"\x05Order\x125\n" +
-	"\x06Create\x12\x13.CreateOrderRequest\x1a\x14.CreateOrderResponse\"\x00B:Z8github.com/joanaeliseal/microservices-proto/golang/orderb\x06proto3"
+	"\border_id\x18\x01 \x01(\x05R\aorderId2J\n" +
+	"\x05Order\x12A\n" +
+	"\x06Create\x12\x19.order.CreateOrderRequest\x1a\x1a.order.CreateOrderResponse\"\x00B:Z8github.com/joanaeliseal/microservices-proto/golang/orderb\x06proto3"
 
 var (
 	file_order_order_proto_rawDescOnce sync.Once
@@ -222,14 +221,14 @@ func file_order_order_proto_rawDescGZIP() []byte {
 
 var file_order_order_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_order_order_proto_goTypes = []any{
-	(*CreateOrderRequest)(nil),  // 0: CreateOrderRequest
-	(*OrderItem)(nil),           // 1: OrderItem
-	(*CreateOrderResponse)(nil), // 2: CreateOrderResponse
+	(*CreateOrderRequest)(nil),  // 0: order.CreateOrderRequest
+	(*OrderItem)(nil),           // 1: order.OrderItem
+	(*CreateOrderResponse)(nil), // 2: order.CreateOrderResponse
 }
 var file_order_order_proto_depIdxs = []int32{
-	1, // 0: CreateOrderRequest.order_items:type_name -> OrderItem
-	0, // 1: Order.Create:input_type -> CreateOrderRequest
-	2, // 2: Order.Create:output_type -> CreateOrderResponse
+	1, // 0: order.CreateOrderRequest.order_items:type_name -> order.OrderItem
+	0, // 1: order.Order.Create:input_type -> order.CreateOrderRequest
+	2, // 2: order.Order.Create:output_type -> order.CreateOrderResponse
 	2, // [2:3] is the sub-list for method output_type
 	1, // [1:2] is the sub-list for method input_type
 	1, // [1:1] is the sub-list for extension type_name

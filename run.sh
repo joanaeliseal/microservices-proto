@@ -2,8 +2,13 @@
 GITHUB_USERNAME=joanaeliseal
 GITHUB_EMAIL=joana.elise@academico.ifpb.edu.br
 
-SERVICE_NAME=payment
+SERVICE_NAME=${1}
 RELEASE_VERSION=v1.2.3
+
+if [ -z "$SERVICE_NAME" ]; then
+  echo "Uso: ./run.sh <order|payment|shipping>"
+  exit 1
+fi
 
 go install google.golang.org/protobuf/cmd/protoc-gen-go@latest # Instala o plugin para gerar código Go a partir de arquivos .proto
 go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest # Instala o plugin para gerar código Go para gRPC a partir de arquivos .proto
